@@ -1,0 +1,40 @@
+/* Apply these styles to your global stylesheet or in a CSS module */
+
+/* Styling for the revealed text */
+.reveal-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5; /* Space between lines */
+    margin-bottom: 15px; /* Space after each line */
+    opacity: 1; /* Default opacity for revealText */
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Styling for the content text */
+  .content-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    line-height: 1.5;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Spacing between lines */
+  .content-text br, .reveal-text br {
+    margin-bottom: 10px; /* Add space between lines */
+  }
+  
+  /* Styling for the hover effect (on hover revealText fades out) */
+  .mask-container:hover .reveal-text {
+    opacity: 0; /* Fade out the revealText on hover */
+  }
+  
+  /* Ensure that content-text stays visible during hover */
+  .mask-container:hover .content-text {
+    opacity: 1; /* Show content-text on hover */
+  }
+  

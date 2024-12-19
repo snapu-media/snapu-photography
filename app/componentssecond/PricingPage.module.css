@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap");
+
+.pricing-page {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  background-color: #F5F5F5;  /* Light Gray background */
+  color: #333333;  /* Dark Gray text color */
+}
+
+.main {
+  max-width: 75rem;
+  padding: 3em 1.5em;
+}
+
+.main__heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2.25em;
+  margin-bottom: 0.75em;
+  text-align: center;
+  color: #002455;  /* Royal Blue for heading */
+}
+
+.cards {
+  position: relative;
+}
+
+.cards__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5em;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 30%;
+  padding: 1.5em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  color: #b3b3b3;
+  background-color: #2b2b2b;  /* Dark Gray background for the card */
+  border: 1px solid #eceff133;
+  border-radius: 15px;
+  position: relative;
+  transition: background-color 400ms ease;
+  height: 400px;  /* Fixed height for all cards */
+}
+
+.card:nth-child(1) {
+  background-color: hsl(0, 0%, 13%);
+}
+
+.card:nth-child(2) {
+  background-color: hsl(0, 0%, 13%);
+}
+
+.card:nth-child(3) {
+  background-color: hsl(0, 0%, 13%);
+}
+
+.card__heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05em;
+  font-weight: 600;
+  color: #0056D2;  /* Royal Blue for card heading */
+}
+
+.card__price {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.75em;
+  font-weight: 700;
+  color: #FF6F00;  /* Bright Orange for pricing */
+}
+
+.card__bullets {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.4;
+}
+
+.card__bullets li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.card__bullets li::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='16' title='check' fill='%23dddddd'%3E%3Cpath d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z' /%3E%3C/svg%3E");
+  margin-right: 1ch;
+}
+
+/* Position the button at the bottom */
+.cta {
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #0056D2;  /* Royal Blue for CTA */
+  padding: 0.7em;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 200ms ease;
+  margin-top: auto; /* Push the button to the bottom */
+}
+
+.cta:hover {
+  background-color: #FF6F00;  /* Bright Orange on hover */
+  box-shadow: 0 0 0 1px #FF6F00;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+  opacity: var(--opacity, 0);
+  -webkit-mask: radial-gradient(
+    25rem 25rem at var(--x) var(--y),
+    #000 1%,
+    transparent 50%
+  );
+  mask: radial-gradient(
+    25rem 25rem at var(--x) var(--y),
+    #000 1%,
+    transparent 50%
+  );
+  transition: 400ms mask ease;
+  will-change: mask;
+}
+
+.overlay .card {
+  background-color: rgb(0, 0, 0); /* Converted HSL(165, 82%, 51%) to RGBA */
+  border-color: #00B388; /* Converted HSL(165, 82%, 51%) to HEX */
+  box-shadow: 0 0 0 1px inset #00B388; /* Converted HSL(165, 82%, 51%) to HEX */
+}
+
+
+.overlay .cta {
+  display: block;
+  grid-row: -1;
+  width: 100%;
+  background-color: hsl(var(--hsl));
+  box-shadow: 0 0 0 1px hsl(var(--hsl));
+}
+
+:not(.overlay) > .card {
+  transition: 400ms background ease;
+  will-change: background;
+}
+
+:not(.overlay) > .card:hover {
+  background: #a2a2ff; /* HEX color for hover state */
+  color: #000;
+}

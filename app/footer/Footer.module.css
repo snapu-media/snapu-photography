@@ -1,0 +1,199 @@
+.footer {
+    background: #F5F5F5;
+    color: #000832;
+    padding: 40px 20px; /* Adjust padding for responsiveness */
+    text-align: left; /* Ensure content aligns to the left */
+    border-top: 1px solid #7489C6;
+    width: 100%;
+    margin-top: auto; /* Push footer to the bottom */
+  }
+  
+  .footerRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align items horizontally to the left */
+    align-items: flex-start; /* Align items vertically to the top */
+    gap: 3.5rem;
+    padding: 40px;
+  }
+  
+  .footerCol {
+    flex: 1; /* Equal column width */
+    min-width: 200px;
+  }
+  
+  .footerCol h4 {
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px; /* Space below headings */
+  }
+  
+  .links {
+    margin-top: 10px;
+    padding-left: 0;
+  }
+  
+  .links li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  
+  .links li a {
+    text-decoration: none;
+    color: #00012a;
+    font-size: 0.95rem;
+  }
+  
+  .links li a:hover {
+    color: #4857ff; /* Highlight links on hover */
+  }
+  
+  .footerCol p {
+    margin: 20px 0;
+    color: #00012a;
+    max-width: 300px;
+  }
+  
+  .footerCol form {
+    display: flex;
+    gap: 5px;
+    flex-direction: column; /* Stack input and button vertically */
+  }
+  
+  .footerCol input {
+    height: 50px; /* Increased height for better appearance */
+    border-radius: 6px;
+    background: none;
+    width: 100%;
+    outline: none;
+    border: 1px solid #7489C6;
+    caret-color: #fff;
+    color: #fff;
+    padding-left: 10px;
+    font-size: 1rem; /* Larger font size for better readability */
+  }
+  
+  .footerCol input::placeholder {
+    color: #ccc;
+  }
+  
+  .footerCol form button {
+    background: #4760ff;
+    outline: none;
+    border: none;
+    padding: 15px 20px; /* Larger padding for better button appearance */
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+    font-size: 1rem; /* Ensure button text size is readable */
+  }
+  
+  .footerCol form button:hover {
+    background: #cdccce;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .icons i {
+    font-size: 1.5rem;
+    color: #afb6c7;
+    transition: color 0.3s;
+  }
+  
+  .icons i:hover {
+    color: #fff;
+  }
+  
+  .footerBottom {
+    width: 100%;  /* Ensures it takes up the full width */
+    text-align: center;  /* Center-aligns the text */
+    padding: 1rem;  /* Adds padding on all sides */
+    background-color: #333;  /* Dark background color */
+    color: white;  /* White text color */
+    margin-top: 2rem;  /* Adds some space above */
+  }
+  
+  .copyright {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;  /* Adjusted size for readability */
+    margin: 0;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .footerBottom {
+      padding: 0.5rem;  /* Reduced padding for smaller screens */
+    }
+  
+    .copyright {
+      font-size: 12px;  /* Smaller font for mobile devices */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footerBottom {
+      padding: 0.5rem;  /* Further reduced padding for very small screens */
+    }
+  
+    .copyright {
+      font-size: 12px;  /* Consistent with mobile size */
+    }
+  }
+  
+
+
+  @media (max-width: 768px) {
+    /* Ensure footer columns stay side by side and don't stack */
+    .footerRow {
+      flex-wrap: wrap;
+      gap: 15px; /* Reduce gap between items on mobile */
+    }
+  
+    .footerCol {
+      flex: 1;
+      min-width: 45%; /* Make columns take up less width on small screens */
+    }
+  
+    .footerCol form {
+      display: block;
+    }
+  
+    .footerCol form :where(input, button) {
+      width: 100%;
+    }
+  
+    .footerCol form button {
+      margin: 10px 0 0 0;
+    }
+  
+    /* Make social media icons smaller on mobile */
+    .icons i {
+      font-size: 1.2rem; /* Reduce size for mobile screens */
+    }
+  
+    /* Fix Subscribe button size on mobile */
+    .footerCol form button {
+      width: 100%; /* Ensure the button fits */
+    }
+  
+    /* Increase input size on mobile */
+    .footerCol input {
+      height: 50px; /* Make input larger on mobile */
+      font-size: 1rem; /* Ensure text size is consistent */
+    }
+  }
+  
+  @media (min-width: 769px) {
+    /* Ensure input field is larger on desktop */
+    .footerCol input {
+      height: 60px; /* Larger input field on desktop */
+      font-size: 1.2rem; /* Larger font size on desktop */
+    }
+  }
+  
