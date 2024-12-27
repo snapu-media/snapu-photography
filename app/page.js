@@ -8,6 +8,7 @@ import {TextRevealMain} from './componentssecond/TextRevealMain'
 import {StickyRevealMain} from './componentssecond/stickyreveal'
 import SideNavbar from "./componentssecond/SideNavBar"
 import MapPage from "./componentssecond/MapPage"
+import GoogleMap from "./componentssecond/GoogleMap"
 
 
 
@@ -22,7 +23,7 @@ export default function Home() {
     <div>
       
       <AuroraBackground/>
-      <div className="bg-gradient-to-b from-[#fff] via-[#00A99D] to-[#FFF] rounded-lg">
+      <div className="bg-gradient-to-b from-[#fff] via-[#00A99D] to-[#FFF] rounded-lg hidden md:block">
       <MaskContainer revealText={
   <div className="text-black text-6xl font-bold text-center space-y-3">
     Photography that<br />
@@ -46,7 +47,7 @@ export default function Home() {
 
     <FocusCards/>
     <ThreeDCardDemo/>
-    <MapPage/>
+    <GoogleMap/>
 
       <main>
         <h2>Welcome to SnapU Media</h2>

@@ -28,7 +28,7 @@ export default function Navbar() {
             <ul className={styles.menuBar}>
               {/* Portfolio */}
               <li>
-                <Link href="/portfolio" className={styles.navLink}>
+                <Link href="/landingpage" className={styles.navLink}>
                   Portfolio
                 </Link>
               </li>
@@ -72,8 +72,8 @@ export default function Navbar() {
                       </Link>
                     </li>
                     <li role="menuitem">
-                      <Link href="/services/Meternity-Photography" className={styles.dropdownLink}>
-                      Meternity Photography
+                      <Link href="/services/Maternity-Photography" className={styles.dropdownLink}>
+                      Maternity Photography
                       </Link>
                     </li>
                     </li>
@@ -83,95 +83,140 @@ export default function Navbar() {
 
               {/* Other Services */}
               <li className={styles.dropdown}>
-                <button
-                  className={`${styles.navLink} ${styles.dropdownBtn}`}
-                  aria-haspopup="true"
-                >
-                  Packages
-                  <i className="bx bx-chevron-down" aria-hidden="true"></i>
-                </button>
-                <div className={styles.dropdownMenu}>
-                  <ul role="menu">
-                    <li>
-                      <span className={styles.dropdownLinkTitle}></span>
-                    </li>
-                    <li role="menuitem">
-                      <Link href="/photographypackages" className={styles.dropdownLink}>
-                        Wedding Photography
-                      </Link>
-                    </li>
-                    <li role="menuitem">
-                      <Link href="/meternityphotographypackages" className={styles.dropdownLink}>
-                      Meternity Photography
-                      </Link>
-                    </li>
-                    
-                    <li role="menuitem">
-                      <Link href="realestatephotographypackages" className={styles.dropdownLink}>
-                      Realestate Photography
-                      </Link>
-                    </li>
-                    <li role="menuitem">
-                      <Link href="babybornphotographypackages" className={styles.dropdownLink}>
-                      Baby Born Photography
-                      </Link>
-                    </li>
-                    <li role="menuitem">
-                      <Link href="productphotographypackages" className={styles.dropdownLink}>
-                      Product Photography
-                      </Link>
-                    </li>
-                    <li role="menuitem">
-                      <Link href="corporateeventsphotographypackages" className={styles.dropdownLink}>
-                      Corporate Events Photography
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </li>
+  <button
+    className={`${styles.navLink} ${styles.dropdownBtn}`}
+    aria-haspopup="true"
+  >
+    Packages
+    <i className="bx bx-chevron-down" aria-hidden="true"></i>
+  </button>
+  <div className={styles.dropdownMenu}>
+    <div className={styles.dropdownColumns}>
+      {/* UK Packages Column */}
+      <ul role="menu" className={styles.dropdownColumn}>
+        <li>
+          <span className={styles.dropdownLinkTitle}>UK Packages</span>
+        </li>
+        <li role="menuitem">
+          <Link href="/photographypackages" className={styles.dropdownLink}>
+            Wedding Photography
+          </Link>
+        </li>
+        <li role="menuitem">
+          <Link href="/meternityphotographypackages" className={styles.dropdownLink}>
+            Maternity Photography
+          </Link>
+        </li>
+        <li role="menuitem">
+          <Link href="realestatephotographypackages" className={styles.dropdownLink}>
+            Real Estate Photography
+          </Link>
+        </li>
+        <li role="menuitem">
+          <Link href="babybornphotographypackages" className={styles.dropdownLink}>
+            Baby Born Photography
+          </Link>
+        </li>
+        <li role="menuitem">
+          <Link href="productphotographypackages" className={styles.dropdownLink}>
+            Product Photography
+          </Link>
+        </li>
+        <li role="menuitem">
+          <Link href="corporateeventsphotographypackages" className={styles.dropdownLink}>
+            Corporate Events Photography
+          </Link>
+        </li>
+      </ul>
+
+      {/* India Packages Column */}
+      <ul role="menu" className={styles.dropdownColumn}>
+        <li>
+          <span className={styles.dropdownLinkTitle}>India Packages</span>
+        </li>
+        <li role="menuitem">
+          <Link href="/photographypackages" className={styles.dropdownLink}>
+            Wedding Photography
+          </Link>
+        </li>
+        <li role="menuitem">
+          <Link href="/meternityphotographypackages" className={styles.dropdownLink}>
+            Maternity Photography
+          </Link>
+        </li>
+        <li role="menuitem">
+          <Link href="realestatephotographypackages" className={styles.dropdownLink}>
+            Real Estate Photography
+          </Link>
+        </li>
+        <li role="menuitem">
+          <Link href="babybornphotographypackages" className={styles.dropdownLink}>
+            Baby Born Photography
+          </Link>
+        </li>
+        <li role="menuitem">
+          <Link href="productphotographypackages" className={styles.dropdownLink}>
+            Product Photography
+          </Link>
+        </li>
+        <li role="menuitem">
+          <Link href="corporateeventsphotographypackages" className={styles.dropdownLink}>
+            Corporate Events Photography
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>
+
+
 
               {/* Demo */}
-              <li className={styles.dropdown}>
-                <button
-                  className={`${styles.navLink} ${styles.dropdownBtn}`}
-                  aria-haspopup="true"
-                >
-                  Client Albums
-                  <i className="bx bx-chevron-down" aria-hidden="true"></i>
-                </button>
-                <div className={styles.dropdownMenu}>
-                  <ul role="menu">
-                    <li>
-                      <span className={styles.dropdownLinkTitle}>Client Albums</span>
-                    </li>
-                    <li role="menuitem">
-                      <Link href="/demos/client-albums/india" className={styles.dropdownLink}>
-                        India
-                      </Link>
-                    </li>
-                    <li role="menuitem">
-                      <Link href="/demos/client-albums/uk" className={styles.dropdownLink}>
-                        UK
-                      </Link>
-                    </li>
-                  </ul>
-                  <ul role="menu">
-                    <li>
-                      <span className={styles.dropdownLinkTitle}>Demos</span>
-                    </li>
-                    <li role="menuitem">
-                      <Link href="/demos/event-types" className={styles.dropdownLink}>
-                        Event Types
-                      </Link>
-                    </li>
-                    <li role="menuitem">
-                      <Link href="/demos/services" className={styles.dropdownLink}>
-                        Services
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </li>
+             {/* Client Albums Dropdown */}
+<li className={styles.dropdown}>
+  <button
+    className={`${styles.navLink} ${styles.dropdownBtn}`}
+    aria-haspopup="true"
+  >
+    Client Albums
+    <i className="bx bx-chevron-down" aria-hidden="true"></i>
+  </button>
+  <div className={styles.dropdownMenu}>
+    <div className={styles.dropdownColumns}>
+      <ul role="menu" className={styles.dropdownColumn}>
+        <li>
+          <span className={styles.dropdownLinkTitle}>Client Albums</span>
+        </li>
+        <li role="menuitem">
+          <Link href="/demos/client-albums/india" className={styles.dropdownLink}>
+            India
+          </Link>
+        </li>
+        <li role="menuitem">
+          <Link href="/demos/client-albums/uk" className={styles.dropdownLink}>
+            UK
+          </Link>
+        </li>
+      </ul>
+      <ul role="menu" className={styles.dropdownColumn}>
+        <li>
+          <span className={styles.dropdownLinkTitle}>Demos</span>
+        </li>
+        <li role="menuitem">
+          <Link href="/demos/event-types" className={styles.dropdownLink}>
+            Event Types
+          </Link>
+        </li>
+        <li role="menuitem">
+          <Link href="/demos/services" className={styles.dropdownLink}>
+            Services
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>
+
 
               {/* About */}
               <li>
@@ -184,8 +229,8 @@ export default function Navbar() {
         </div>
         <div className={styles.navEnd}>
           <div className={styles.rightContainer}>
-            <Link href="/enquiry">
-              <button className={`${styles.btn} ${styles.btnPrimary}`}>Enquiry</button>
+            <Link href="/contact">
+              <button className={`${styles.btn} ${styles.btnPrimary}`}>Contact</button>
             </Link>
           </div>
           <button

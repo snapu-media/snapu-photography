@@ -61,13 +61,14 @@ module.exports = {
       },
       animation: {
         aurora: "aurora 60s linear infinite",
+        'spin-slow': 'spin 10s linear infinite',
       },
       keyframes: {
         aurora: {
           from: {
             backgroundPosition: "50% 50%, 50% 50%",
           },
-          to: {
+          to: { 
             backgroundPosition: "350% 50%, 350% 50%",
           },
         },

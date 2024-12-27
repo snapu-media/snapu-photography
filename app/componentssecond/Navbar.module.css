@@ -11,8 +11,7 @@
   margin: 0 auto;
   height: 90px;
   padding: 1.2rem 3rem;
-  background: linear-gradient(to top, #fbfbfb, #e2eeff66); 
-
+  background: linear-gradient(to top, #fbfbfb, #e2eeff66);
 }
 
 .navStart {
@@ -80,6 +79,28 @@
   transition: visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Dropdown Container for Columns */
+.dropdownColumns {
+  display: flex;                  /* Arrange items in columns */
+  justify-content: space-between; /* Ensure columns are spaced apart */
+  gap: 2rem;                      /* Space between columns */
+  width: 100%;
+}
+
+.dropdownColumn {
+  display: flex;
+  flex-direction: column; /* Stack links vertically within each column */
+  gap: 0.5rem;
+  min-width: 200px;        /* Increase the minimum width for each column */
+  width: auto;             /* Allow the columns to adjust automatically */
+}
+
+.dropdownLinkTitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Dropdown Links */
 .dropdownLink {
   display: block;
   padding: 0.5rem;
@@ -91,11 +112,7 @@
   color: var(--primary-color);
 }
 
-.dropdownLinkTitle {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
+/* Button Primary */
 .btnPrimary {
   display: block;
   background-color: var(--primary-color);
@@ -121,10 +138,8 @@
     display: block;
   }
   .navEnd {
-    display: none; 
-   
+    display: none;
   }
-
 
   .menu {
     display: none;
@@ -161,10 +176,8 @@
 /* Responsive Styles for Small Screens (Mobile) */
 @media (max-width: 600px) {
   .navEnd {
-    display: none; 
-   
+    display: none;
   }
-
 
   .menuBar {
     gap: 0.5rem; /* Adjust gap between menu items */
