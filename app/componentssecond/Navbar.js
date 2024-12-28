@@ -27,12 +27,37 @@ export default function Navbar() {
           >
             <ul className={styles.menuBar}>
               {/* Portfolio */}
-              <li>
-                <Link href="/landingpage" className={styles.navLink}>
+              <li className={styles.dropdown}>
+                <button
+                  className={`${styles.navLink} ${styles.dropdownBtn}`}
+                  aria-haspopup="true"
+                >
                   Portfolio
-                </Link>
-              </li>
-
+                  <i className="bx bx-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div className={styles.dropdownMenu}>
+                  <ul role="menu">
+                    <li>
+                      {/* <span className={styles.dropdownLinkTitle}>Our Services</span> */}
+                    </li>
+                    <li role="menuitem">
+                      <Link href="/landingpage" className={styles.dropdownLink}>
+                        Our Portfolio
+                      </Link>
+                    </li>
+                    <li role="menuitem">
+                      <Link href="/blogs" className={styles.dropdownLink}>
+                      Blogs
+                      </Link>
+                    </li>
+                    <li role="menuitem">
+                      <Link href="/articles" className={styles.dropdownLink}>
+                      Articles
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li> 
               {/* Services */}
               <li className={styles.dropdown}>
                 <button
@@ -66,6 +91,7 @@ export default function Navbar() {
                       <Link href="/services/Corporate-Events-Photography" className={styles.dropdownLink}>
                       Corporate Events Photography
                       </Link>
+                      </li>
                       <li role="menuitem">
                       <Link href="/services/Baby-Born-Photography" className={styles.dropdownLink}>
                       Baby Born Photography
@@ -76,7 +102,7 @@ export default function Navbar() {
                       Maternity Photography
                       </Link>
                     </li>
-                    </li>
+                    
                   </ul>
                 </div>
               </li>
