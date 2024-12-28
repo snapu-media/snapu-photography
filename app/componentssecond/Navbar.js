@@ -46,7 +46,7 @@ export default function Navbar() {
                       </Link>
                     </li>
                     <li role="menuitem">
-                      <Link href="/blogs" className={styles.dropdownLink}>
+                      <Link href="/SnapuBlogs" className={styles.dropdownLink}>
                       Blogs
                       </Link>
                     </li>
